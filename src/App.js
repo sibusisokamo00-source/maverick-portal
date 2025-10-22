@@ -4,6 +4,8 @@ import ClientActivation from './components/Client/ClientActivation';
 import ClientDashboard from './components/Client/ClientDashboard';
 import MentorLogin from './components/Mentor/MentorLogin';
 import MentorDashboard from './components/Mentor/MentorDashboard';
+import EAManagement from './components/Mentor/EAManagement';
+import EADetails from './components/Mentor/EADetails';
 import MagicLinkHandler from './components/Shared/MagicLinkHandler';
 import './App.css';
 
@@ -24,6 +26,14 @@ function App() {
           <Route 
             path="/mentor/dashboard" 
             element={user?.role === 'mentor' ? <MentorDashboard /> : <Navigate to="/mentor/login" />} 
+          />
+          <Route 
+            path="/mentor/eas" 
+            element={user?.role === 'mentor' ? <EAManagement /> : <Navigate to="/mentor/login" />} 
+          />
+          <Route 
+            path="/mentor/eas/:id" 
+            element={user?.role === 'mentor' ? <EADetails /> : <Navigate to="/mentor/login" />} 
           />
           
           {/* Protected Client Routes */}
