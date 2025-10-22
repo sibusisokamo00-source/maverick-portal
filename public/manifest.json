@@ -1,0 +1,8 @@
+{
+  "short_name": "MaverickPortal",
+  "name": "Maverick EA Portal", 
+  "start_url": "/",
+  "background_color": "#1F2937",
+  "display": "standalone",
+  "theme_color": "#3B82F6"
+}
